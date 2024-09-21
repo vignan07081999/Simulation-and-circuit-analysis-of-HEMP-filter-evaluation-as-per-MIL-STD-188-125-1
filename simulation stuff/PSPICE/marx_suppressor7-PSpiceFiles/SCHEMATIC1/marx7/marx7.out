@@ -1,0 +1,136 @@
+
+**** 10/16/20 15:30:34 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-marx7"  [ C:\Users\vigna\Documents\1.SAMEER\simulation stuff\PSPICE\marx_suppressor7-pspicefiles\schematic1\
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "marx7.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\vigna\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 5m 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source MARX_SUPPRESSOR7
+X_U2         N41441 N41451 Sw_tClose PARAMS: tClose=10.9n ttran=0.075u
++  Rclosed=0.000001 Ropen=1Meg
+R_R1         N41091 N41079  2.2 TC=0,0 
+R_R4         0 N41137  0.01 TC=0,0 
+R_Rs         0 N41451  500k TC=0,0 
+L_L         N41625 N41631  0.001n  
+R_R         N41451 N41125  60 TC=0,0 
+R_R3         0 N41073  0.01 TC=0,0 
+C_C         0 N41441  0.012u  TC=0,0 
+X_U1         N41625 N41441 Sw_tClose PARAMS: tClose=0 ttran=0.2u Rclosed=0.01
++  Ropen=1Meg
+C_Ceq         0 N41631  210.3p IC=-12.5kv TC=0,0 
+R_R2         0 N41151  0.01 TC=0,0 
+X_1         N41073 N41125 MOVBASEKEL PARAMS:  I1=1m V1=430 I2=50 V2=710 CN=10p
++  TOL=10 TC=5 RON=10m
+X_2         N41137 N41151 MOVBASEKEL PARAMS:  I1=1m V1=750 I2=50 V2=1240 CN=10p
++  TOL=10 TC=5 RON=10m
+L_L1         N41125 N41079  3m  
+L_L2         N41151 N41091  15u  
+C_C1         N41073 N41079  200p  TC=0,0 
+C_C2         N41137 N41091  1p  TC=0,0 
+
+**** RESUMING marx7.cir ****
+.END
+
+**** 10/16/20 15:30:34 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-marx7"  [ C:\Users\vigna\Documents\1.SAMEER\simulation stuff\PSPICE\marx_suppressor7-pspicefiles\schematic1\
+
+
+ ****     Voltage Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U2.Smod       X_U1.Smod       
+         RON    1.000000E-06     .01         
+        ROFF    1.000000E+06    1.000000E+06 
+         VON    1               1            
+        VOFF    0               0            
+
+
+**** 10/16/20 15:30:34 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-marx7"  [ C:\Users\vigna\Documents\1.SAMEER\simulation stuff\PSPICE\marx_suppressor7-pspicefiles\schematic1\
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N41073) 138.2E-15 (N41079)     .0138 (N41091) 62.49E-06 (N41125)     .0138     
+
+(N41137) 625.5E-18 (N41151) 62.49E-06 (N41441) 6250.2000 (N41451)     .3888     
+
+(N41625) 12.50E+03 (N41631) 12.50E+03 (X_1.21) 138.2E-15 (X_1.22)     .0138     
+
+(X_1.23) 207.4E-15 (X_1.24)    0.0000 (X_1.25)    0.0000 (X_1.54) 101.3E-12     
+
+(X_2.21) 625.5E-18 (X_2.22) 62.49E-06 (X_2.23) 938.3E-18 (X_2.24)    0.0000     
+
+(X_2.25)    0.0000 (X_2.54) 292.4E-18 (X_U1.3)    0.0000 (X_U2.3)    0.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    X_U2.V1      0.000E+00
+    X_U1.V1      0.000E+00
+    X_1.VSENSE  -1.382E-11
+    X_2.VSENSE  -6.255E-14
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 10/16/20 15:30:34 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-marx7"  [ C:\Users\vigna\Documents\1.SAMEER\simulation stuff\PSPICE\marx_suppressor7-pspicefiles\schematic1\
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .13
+

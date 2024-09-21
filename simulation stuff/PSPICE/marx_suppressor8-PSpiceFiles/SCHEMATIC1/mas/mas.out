@@ -1,0 +1,136 @@
+
+**** 10/19/20 10:25:50 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-mas"  [ c:\users\vigna\documents\1.sameer\simulation stuff\pspice\marx_suppressor8-pspicefiles\schematic1\ma
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "mas.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\vigna\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 5m 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source MARX_SUPPRESSOR8
+R_R1         N45429 N45417  2.2 TC=0,0 
+R_R         N45693 N45463  60 TC=0,0 
+R_R4         0 N45475  0.01 TC=0,0 
+C_C2         N45475 N45429  183.33p  TC=0,0 
+L_L         N45867 N45873  0.001n  
+C_C         0 N45681  0.012u  TC=0,0 
+C_C1         N45411 N45417  183.33p  TC=0,0 
+X_U1         N45867 N45681 Sw_tClose PARAMS: tClose=0 ttran=0.2u Rclosed=0.01
++  Ropen=1Meg
+X_U2         N45681 N45693 Sw_tClose PARAMS: tClose=10.9n ttran=0.075u
++  Rclosed=0.000001 Ropen=1Meg
+R_Rs         0 N45693  500k TC=0,0 
+C_Ceq         0 N45873  210.3p IC=-125kv TC=0,0 
+L_L1         N45463 N45417  3m  
+L_L2         N45489 N45429  3m  
+X_1         N45411 N45463 MOVBASEKEL PARAMS:  I1=1m V1=430 I2=50 V2=710 CN=10p
++  TOL=10 TC=5 RON=10m
+X_2         N45475 N45489 MOVBASEKEL PARAMS:  I1=1m V1=750 I2=50 V2=1240 CN=10p
++  TOL=10 TC=5 RON=10m
+R_R2         0 N45489  0.01 TC=0,0 
+R_R3         0 N45411  0.01 TC=0,0 
+
+**** RESUMING mas.cir ****
+.END
+
+**** 10/19/20 10:25:50 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-mas"  [ c:\users\vigna\documents\1.sameer\simulation stuff\pspice\marx_suppressor8-pspicefiles\schematic1\ma
+
+
+ ****     Voltage Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.Smod       X_U2.Smod       
+         RON     .01            1.000000E-06 
+        ROFF    1.000000E+06    1.000000E+06 
+         VON    1               1            
+        VOFF    0               0            
+
+
+**** 10/19/20 10:25:50 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-mas"  [ c:\users\vigna\documents\1.sameer\simulation stuff\pspice\marx_suppressor8-pspicefiles\schematic1\ma
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N45411) 1.382E-12 (N45417)     .1381 (N45429) 624.9E-06 (N45463)     .1381     
+
+(N45475) 6.255E-15 (N45489) 624.9E-06 (N45681) 62.50E+03 (N45693)    3.8875     
+
+(N45867) 125.0E+03 (N45873) 125.0E+03 (X_1.21) 1.382E-12 (X_1.22)     .1381     
+
+(X_1.23) 2.074E-12 (X_1.24)    0.0000 (X_1.25)    0.0000 (X_1.54) 14.56E-09     
+
+(X_2.21) 6.255E-15 (X_2.22) 624.9E-06 (X_2.23) 9.383E-15 (X_2.24)    0.0000     
+
+(X_2.25)    0.0000 (X_2.54) 41.48E-15 (X_U1.3)    0.0000 (X_U2.3)    0.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    X_U1.V1      0.000E+00
+    X_U2.V1      0.000E+00
+    X_1.VSENSE  -1.382E-10
+    X_2.VSENSE  -6.255E-13
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 10/19/20 10:25:50 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-mas"  [ c:\users\vigna\documents\1.sameer\simulation stuff\pspice\marx_suppressor8-pspicefiles\schematic1\ma
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .16
+

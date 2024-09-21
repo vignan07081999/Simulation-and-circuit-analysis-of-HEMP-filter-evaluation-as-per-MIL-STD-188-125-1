@@ -1,0 +1,3 @@
+Circuit: * C:\Users\vigna\Documents\1.SAMEER\simulation stuff\LTSPICE\downloaded\marx-web spark gaps.asc
+
+Fatal Error: x10:b2: One of 'V' or 'I' must be defined for a behavioral source

@@ -1,0 +1,22 @@
+* source MARX_SUPPRESSOR_4
+X_U1         N32713 N32367 Sw_tClose PARAMS: tClose=0 ttran=0.2u Rclosed=0.01
++  Ropen=1Meg
+X_U2         N32367 N32377 Sw_tClose PARAMS: tClose=10.9n ttran=0.075u
++  Rclosed=0.000001 Ropen=1Meg
+R_R         N32377 N37370  60 TC=0,0 
+L_L         N32713 N32719  0.001n  
+C_C         0 N32367  0.012u  TC=0,0 
+R_Rs         0 N32377  500k TC=0,0 
+C_Ceq         0 N32719  210.3p IC=-1.23kV TC=0,0 
+C_890324027012CS         N33248 N33351  1.2u  TC=0,0 
+L_74457010         0 N33351  6.1u  
+R_R1         N33423 N33351  2 TC=0,0 
+R_R2         N37370 N35196  0.01 TC=0,0 
+R_R3         0 N33248  0.01 TC=0,0 
+R_R4         0 N35146  0.01 TC=0,0 
+C_890324027012CS_2         N35146 N33423  1.33u  TC=0,0 
+L_74457010_2         N35196 N33423  1u  
+X_VR2         N35146 N35196 MOVBASEKEL PARAMS:  I1=0.1m V1=68 I2=1 V2=135
++  CN=10p TOL=10 TC=5 RON=10m
+X_VR3         N33248 0 MOVBASEKEL PARAMS:  I1=0.1m V1=68 I2=1 V2=150 CN=10p
++  TOL=10 TC=5 RON=10m

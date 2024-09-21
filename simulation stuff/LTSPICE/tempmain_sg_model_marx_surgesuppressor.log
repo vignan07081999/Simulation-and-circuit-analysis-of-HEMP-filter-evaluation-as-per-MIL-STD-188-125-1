@@ -1,0 +1,22 @@
+Circuit: * C:\Users\vigna\Documents\1.SAMEER\simulation stuff\LTSPICE\tempmain_sg_model_marx_surgesuppressor.asc
+
+x1:v2: Missing value, assumed 0V @ DC
+Direct Newton iteration for .op point succeeded.
+
+Date: Fri Aug 28 10:46:21 2020
+Total elapsed time: 0.161 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 3969
+traniter = 3964
+tranpoints = 1914
+accept = 1864
+rejected = 50
+matrix size = 19
+fillins = 1
+solver = Normal
+Matrix Compiler1: 706 bytes object code size  0.3/0.2/[0.1]
+Matrix Compiler2: 1.19 KB object code size  0.2/0.5/[0.2]
+

@@ -1,0 +1,68 @@
+
+**** 09/29/20 14:29:31 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-marxsup5"  [ c:\users\vigna\documents\1.sameer\simulation stuff\pspice\marx_suppression5-pspicefiles\schemat
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "marxsup5.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\vigna\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 5m 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source MARX_SUPPRESSION5
+X_WES554001_1         N38887 N38975 MOVBASEKEL PARAMS:  I1=1m V1=510 I2=5
++  V2=842 CN=10p TOL=10 TC=5 RON=10m
+L_L         N38819 N38825  0.001n  
+R_R4         0 N38993  0.01 TC=0,0 
+R_R1         N38941 N38937  2.2 TC=0,0 
+C_C         0 N38635  0.012u  TC=0,0 
+C_Ceq         0 N38825  210.3p IC=-1.23kV TC=0,0 
+R_R         N38645 N38975  60 TC=0,0 
+R_R3         0 N38887  0.01 TC=0,0 
+R_R2         0 N39013  0.01 TC=0,0 
+R_Rs         0 N38645  500k TC=0,0 
+X_U1         N38819 N38635 Sw_tClose PARAMS: tClose=0 ttran=0.2u Rclosed=0.01
++  Ropen=1Meg
+X_U2         N38635 N38645 Sw_tClose PARAMS: tClose=10.9n ttran=0.075u
++  Rclosed=0.000001 Ropen=1Meg
+X_WES554001_2         N38993 N39013 MOVBASEKEL PARAMS:  I1=1m V1=510 I2=5
++  V2=842 CN=10p TOL=10 TC=5 RON=10m
+C_WE         890324027012CS_1 N38887 N38937  1.2u  TC=0,0 
+C_WE         890324027012CS_2 N38993 N38941  1.2u  TC=0,0 
+
+ERROR(ORPSIM-15089): Can not re-define C_WE. C_WE is either a system defined variable or has already been defined
+-------------$
+ERROR(ORPSIM-16371): Extra text on line
+L_WE         6R1_2 N39013 N38941  10uH  
+L_WE         6R1_1 N38975 N38937  6.1u  
+
+ERROR(ORPSIM-15089): Can not re-define L_WE. L_WE is either a system defined variable or has already been defined
+-------------$
+ERROR(ORPSIM-16371): Extra text on line
+
+**** RESUMING marxsup5.cir ****
+.END
+
+WARNING(ORPSIM-15220): Error in opening Alias File : c:\users\vigna\documents\1.sameer\simulation stuff\pspice\marx_suppression5-PSpiceFiles\SCHEMATIC1\SCHEMATIC1.als
+

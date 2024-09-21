@@ -1,0 +1,15 @@
+Version 4
+SymbolType BLOCK
+LINE Normal -80 0 -35 0
+LINE Normal 80 0 34 0
+CIRCLE Normal -14 9 -35 -10
+CIRCLE Normal 34 9 13 -10
+TEXT -87 -17 Left 2 1
+TEXT 72 -16 Left 2 2
+TEXT -27 -32 Left 2 Sgap
+PIN -80 0 NONE 8
+PINATTR PinName 1
+PINATTR SpiceOrder 1
+PIN 80 0 NONE 8
+PINATTR PinName 2
+PINATTR SpiceOrder 2

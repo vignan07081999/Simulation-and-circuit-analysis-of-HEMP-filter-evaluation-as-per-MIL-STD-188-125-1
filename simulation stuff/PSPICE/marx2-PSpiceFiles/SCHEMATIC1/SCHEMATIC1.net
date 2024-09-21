@@ -1,0 +1,10 @@
+* source MARX2
+C_C1         0 N00184  210.3p IC=-50kV TC=0,0 
+C_C2         0 N00176  46.7p  TC=0,0 
+R_R1         0 N00172  150 TC=0,0 
+L_L1         N00180 N00184  0.008n  
+X_U1         N00180 N00176 Sw_tClose PARAMS: tClose=0 ttran=1n Rclosed=0.01
++  Ropen=1Meg
+X_U2         N00176 N00172 Sw_tClose PARAMS: tClose=10.9n ttran=20n
++  Rclosed=0.000001 Ropen=1Meg
+R_R2         0 N00172  10k TC=0,0 

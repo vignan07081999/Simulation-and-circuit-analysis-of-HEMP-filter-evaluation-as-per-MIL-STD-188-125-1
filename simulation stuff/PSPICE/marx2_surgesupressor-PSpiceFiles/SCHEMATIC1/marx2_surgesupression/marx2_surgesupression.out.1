@@ -1,0 +1,73 @@
+
+**** 09/03/20 12:48:20 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-marx2_surgesupression"  [ C:\Users\vigna\Documents\1.SAMEER\simulation stuff\PSPICE\marx2_surgesupressor-psp
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "marx2_surgesupression.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\vigna\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 5ms 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source MARX2_SURGESUPRESSOR
+L_L4         N20928 N20794  5000u  
+R_R5         N20704 N20794  2 TC=0,0 
+C_C1         N20566 N21070  210.3p IC=-300kV TC=0,0 
+X_U1         N21064 N20478 Sw_tClose PARAMS: tClose=0 ttran=0.2u Rclosed=0.01
++  Ropen=1Meg
+R_R3         N20488 N20794  60 TC=0,0 
+C_C7         N20704 N20928  0.001u  TC=0,0 
+R_R4         N20566 N20488  500k TC=0,0 
+C_C2         N20566 N20478  0.012u  TC=0,0 
+X_U2         N20478 N20488 Sw_tClose PARAMS: tClose=10.9n ttran=0.075u
++  Rclosed=0.000001 Ropen=1Meg
+L_L1         N21064 N21070  0.001n  
+X_VR3         N20704 N20928 MOVBASEKEL PARAMS:  I1=50 V1=1355 I2=1m V2=820
++  CN=10p TOL=10 TC=5 RON=10m
+
+**** RESUMING marx2_surgesupression.cir ****
+.END
+
+ERROR(ORPSIM-15142): Node N20928 is floating
+
+ERROR(ORPSIM-15142): Node N20794 is floating
+
+ERROR(ORPSIM-15142): Node N20704 is floating
+
+ERROR(ORPSIM-15142): Node N20566 is floating
+
+ERROR(ORPSIM-15142): Node N21070 is floating
+
+ERROR(ORPSIM-15142): Node N20488 is floating
+
+ERROR(ORPSIM-15142): Node N20478 is floating
+
+ERROR(ORPSIM-15142): Node N21064 is floating
+
+ERROR(ORPSIM-15142): Node X_VR3.21 is floating
+
+ERROR(ORPSIM-15142): Node X_VR3.23 is floating
+
+ERROR(ORPSIM-15142): Node X_VR3.22 is floating
+

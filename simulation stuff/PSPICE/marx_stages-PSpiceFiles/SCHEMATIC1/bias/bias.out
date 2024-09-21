@@ -1,0 +1,144 @@
+
+**** 08/18/20 09:43:24 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ C:\Users\vigna\Documents\1.SAMEER\simulation stuff\PSPICE\marx_stages-pspicefiles\schematic1\bias.s
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "bias.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\vigna\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source MARX_STAGES
+R_R2         0 N16112  10k TC=0,0 
+R_R1         0 N16112  150 TC=0,0 
+X_U2         N16190 N16112 Sw_tClose PARAMS: tClose=10.9n ttran=20n
++  Rclosed=0.000001 Ropen=1Meg
+C_C2         0 N16190  0.005u  TC=0,0 
+C_C3         N16507 N16498  3.1n  TC=0,0 
+C_C4         N16628 N16614  3.1n  TC=0,0 
+C_C5         N16697 N16516  3.1n  TC=0,0 
+C_C6         0 N16610  3.1n  TC=0,0 
+R_R3         N16610 N16516  500k TC=0,0 
+R_R4         N16516 N16614  500k TC=0,0 
+R_R5         N16614 N16498  500k TC=0,0 
+R_R6         N16628 N16507  500k TC=0,0 
+R_R7         N16697 N16628  500k TC=0,0 
+R_R8         0 N16697  500k TC=0,0 
+R_R9         N17047 N16610  500k TC=0,0 
+X_U3         N16498 N16190 Sw_tClose PARAMS: tClose=0 ttran=1n Rclosed=0.01
++  Ropen=1Meg
+X_U4         N16614 N16507 Sw_tClose PARAMS: tClose=0 ttran=1n Rclosed=0.01
++  Ropen=1Meg
+X_U5         N16516 N16628 Sw_tClose PARAMS: tClose=0 ttran=1n Rclosed=0.01
++  Ropen=1Meg
+X_U6         N16610 N16697 Sw_tClose PARAMS: tClose=0 ttran=1n Rclosed=0.01
++  Ropen=1Meg
+V_V1         N17047 0 50k
+
+**** RESUMING bias.cir ****
+.END
+
+**** 08/18/20 09:43:24 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ C:\Users\vigna\Documents\1.SAMEER\simulation stuff\PSPICE\marx_stages-pspicefiles\schematic1\bias.s
+
+
+ ****     Voltage Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U2.Smod       X_U3.Smod       X_U4.Smod       X_U5.Smod       
+         RON    1.000000E-06     .01             .01             .01         
+        ROFF    1.000000E+06    1.000000E+06    1.000000E+06    1.000000E+06 
+         VON    1               1               1               1            
+        VOFF    0               0               0               0            
+
+
+               X_U6.Smod       
+         RON     .01         
+        ROFF    1.000000E+06 
+         VON    1            
+        VOFF    0            
+
+
+**** 08/18/20 09:43:24 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ C:\Users\vigna\Documents\1.SAMEER\simulation stuff\PSPICE\marx_stages-pspicefiles\schematic1\bias.s
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N16112)    1.1689 (N16190) 7910.4000 (N16498) 15.82E+03 (N16507) 18.36E+03     
+
+(N16516) 24.44E+03 (N16610) 32.49E+03 (N16614) 19.77E+03 (N16628) 17.66E+03     
+
+(N16697) 13.56E+03 (N17047) 50.00E+03 (X_U2.3)    0.0000 (X_U3.3)    0.0000     
+
+(X_U4.3)    0.0000 (X_U5.3)    0.0000 (X_U6.3)    0.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -3.503E-02
+    X_U2.V1      0.000E+00
+    X_U3.V1      0.000E+00
+    X_U4.V1      0.000E+00
+    X_U5.V1      0.000E+00
+    X_U6.V1      0.000E+00
+
+    TOTAL POWER DISSIPATION   1.75E+03  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 08/18/20 09:43:24 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-bias"  [ C:\Users\vigna\Documents\1.SAMEER\simulation stuff\PSPICE\marx_stages-pspicefiles\schematic1\bias.s
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .02
+

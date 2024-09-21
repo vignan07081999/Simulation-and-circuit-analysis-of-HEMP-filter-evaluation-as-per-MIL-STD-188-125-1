@@ -1,0 +1,13 @@
+* source SURGESUPRESSOR
+R_R2         N02180 N02190  940m TC=0,0 
+R_R3         0 N02180  25.1 TC=0,0 
+R_R4         N02169 N02176  1k TC=0,0 
+C_C1         0 N02176  6.04u  TC=0,0 
+L_L1         N02190 N02224  10uH  
+X_U1         N02176 N02180 Sw_tClose PARAMS: tClose=0.025s ttran=1u
++  Rclosed=0.01 Ropen=1Meg
+V_V3         N02169 0 50Vdc
+R_R5         0 N02224  19.9 TC=0,0 
+X_VR1         0 N02224 MOVBASEKEL PARAMS:  I1=1m V1=235 I2=3 V2=300 CN=10p
++  TOL=10 TC=5 RON=10m
+R_R6         0 N02224  160 TC=0,0 

@@ -1,0 +1,105 @@
+
+**** 08/19/20 09:42:37 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-marx2"  [ C:\Users\vigna\Documents\1.SAMEER\simulation stuff\PSPICE\marx2-pspicefiles\schematic1\marx2.sim ]
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "marx2.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\vigna\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 10us 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source MARX2
+C_C1         0 N00184  210.3p IC=-50kV TC=0,0 
+C_C2         0 N00176  0.005u  TC=0,0 
+R_R1         0 N00172  150 TC=0,0 
+L_L1         N00180 N00184  0.008nH  
+X_U1         N00180 N00176 Sw_tClose PARAMS: tClose=0 ttran=1n Rclosed=0.01
++  Ropen=1Meg
+X_U2         N00176 N00172 Sw_tClose PARAMS: tClose=10.9n ttran=20n
++  Rclosed=0.000001 Ropen=1Meg
+R_R2         0 N00172  10k TC=0,0 
+X_VR1         0 N00172 MOVBASEKEL PARAMS:  I1=1 V1=300 I2=30 V2=100 CN=10p
++  TOL=10 TC=5 RON=10m
+
+**** RESUMING marx2.cir ****
+.END
+
+**** 08/19/20 09:42:37 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-marx2"  [ C:\Users\vigna\Documents\1.SAMEER\simulation stuff\PSPICE\marx2-pspicefiles\schematic1\marx2.sim ]
+
+
+ ****     Voltage Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.Smod       X_U2.Smod       
+         RON     .01            1.000000E-06 
+        ROFF    1.000000E+06    1.000000E+06 
+         VON    1               1            
+        VOFF    0               0            
+
+
+Starting pseudo-transient algorithm.
+
+ERROR -- Convergence problem in transient bias point calculation
+
+
+  Last node voltages tried were:
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00172) 17.76E-06 (N00176) 1775.8000 (N00180) 3505.4000 (N00184) 3505.4000     
+
+(X_U1.3)    0.0000 (X_U2.3)    0.0000 (X_VR1.21)    0.0000                      
+
+(X_VR1.22) 8.879E-06                  (X_VR1.23) 8.879E-06                      
+
+(X_VR1.24)-10.00E+09                  (X_VR1.25)-13.28E+06                      
+
+(X_VR1.54)   47.1020                  
+
+
+  These voltages failed to converge:
+
+    V(X_VR1.25)               =   -10.00GV  \   -13.28MV
+    V(X_VR1.54)               =    35.23KV  \     47.10V
+    V(X_VR1.24)               =   -10.00GV  \   -10.00GV
+
+  These supply currents failed to converge:
+
+    I(L_L1)                   =   -1.709mA  \   -1.730mA
+
+  These devices failed to converge:
+    X_VR1.GB1 X_VR1.GB2 
+
+ERROR(ORPSIM-15659): Discontinuing simulation due to convergence problem
+
+**** Interrupt ****

@@ -1,0 +1,139 @@
+
+**** 09/04/20 16:26:52 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-marxtesting"  [ C:\Users\vigna\Documents\1.SAMEER\simulation stuff\PSPICE\marx_surgesuppression3-PSpiceFiles
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "marxtesting.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\vigna\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 5m 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source MARX_SURGESUPPRESSION3
+X_U1         N24766 N24176 Sw_tClose PARAMS: tClose=0 ttran=0.2u Rclosed=0.01
++  Ropen=1Meg
+X_U2         N24176 N24186 Sw_tClose PARAMS: tClose=10.9n ttran=0.075u
++  Rclosed=0.000001 Ropen=1Meg
+C_Ceq         0 N24772  210.3p IC=-300kV TC=0,0 
+R_Rl         0 N25086  2 TC=0,0 
+R_Rs         0 N24186  500k TC=0,0 
+L_L         N24766 N24772  0.001n  
+X_MOV3         0 0 MOVBASEKEL PARAMS:  I1=50 V1=1355 I2=1m V2=820 CN=10p TOL=10
++  TC=5 RON=10m
+L_L3         N24620 0  5000u  
+X_MOV1         0 N24584 MOVBASEKEL PARAMS:  I1=50 V1=1355 I2=1m V2=820 CN=10p
++  TOL=10 TC=5 RON=10m
+R_R         N24186 N24584  60 TC=0,0 
+C_C         0 N24176  0.012u  TC=0,0 
+L_L1         N25525 N24584  5000u  
+C_C3         0 N24620  0.001u  TC=0,0 
+X_MOV4         0 N25525 MOVBASEKEL PARAMS:  I1=50 V1=1355 I2=1m V2=820 CN=10p
++  TOL=10 TC=5 RON=10m
+C_C4         0 N25086  0.001u  TC=0,0 
+L_L4         N25086 N25525  5000u  
+
+**** RESUMING marxtesting.cir ****
+.END
+
+**** 09/04/20 16:26:52 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-marxtesting"  [ C:\Users\vigna\Documents\1.SAMEER\simulation stuff\PSPICE\marx_surgesuppression3-PSpiceFiles
+
+
+ ****     Voltage Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.Smod       X_U2.Smod       
+         RON     .01            1.000000E-06 
+        ROFF    1.000000E+06    1.000000E+06 
+         VON    1               1            
+        VOFF    0               0            
+
+
+INTERNAL ERROR -- Overflow, Convert
+
+ABORTING SIMULATION
+**** 09/04/20 16:26:52 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-marxtesting"  [ C:\Users\vigna\Documents\1.SAMEER\simulation stuff\PSPICE\marx_surgesuppression3-PSpiceFiles
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+Node counts:
+  Top level (NUNODS)                =           9
+  External (NCNODS)                 =          29
+  Total (NUMNOD)                    =          29
+
+Total device count (NUMEL)          =          19
+  Capacitors (C)                    =           4
+  VCCS (G)                          =           0
+  Inductors (L)                     =           4
+  Resistors (R)                     =           3
+  VSwitches (S)                     =           2
+  Voltage Sources (V)               =           2
+
+Number of subcircuits (X)           =           5
+
+Matrix statistics:
+  Matrix size (NSTOP)               =          38
+  Initial no. elements (NTTAR)      =         109
+  No. elements w/ fillin (NTTBR)    =         127
+  No. fillins (IFILL)               =          18
+  No. overflows (NTTOV)             =          81
+  No. LU operations (IOPS)          =         124
+  Percent sparsity (PERSPA)         =      91.205
+
+Analysis statistics:
+  No. total time points (NUMTTP)    =           0
+  No. rejected time points (NUMRTP) =           0
+  No. iterations (NUMNIT)           =           0
+
+Load Threads                        =           4
+
+Runtime statistics:                       Seconds      Iterations
+  Matrix load                       =        0.00
+  Matrix solution                   =        0.00               2
+  Readin                            =         .02
+  General setup                     =        0.00
+  CMI setup                     =        0.00
+  Setup                             =        0.00
+  DC sweep                          =        0.00               0
+  Bias point                        =        0.00               0
+  AC and noise                      =        0.00               0
+  Total transient analysis          =        0.00
+  Output                            =        0.00
+  Overhead                          =        0.00
+  Total job time (using Solver 1)   =         .02
+

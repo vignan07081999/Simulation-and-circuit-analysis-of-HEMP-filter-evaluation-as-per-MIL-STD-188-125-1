@@ -1,0 +1,23 @@
+* source MARX2_SUPPRESSION2
+C_C         0 N12915  0.012u  TC=0,0 
+X_U2         N12915 N12953 Sw_tClose PARAMS: tClose=10.9n ttran=0.075u
++  Rclosed=0.000001 Ropen=1Meg
+L_L         N12921 N12927  0.001n  
+R_Rs         0 N12953  500k TC=0,0 
+C_Ceq         0 N12927  210.3p IC=-300kV TC=0,0 
+R_R         N12953 N13924  60 TC=0,0 
+L_L2         N13505 N13924  5000u  
+C_C2         N13051 N13505  0.001u  TC=0,0 
+X_U1         N12921 N12915 Sw_tClose PARAMS: tClose=0 ttran=0.2u Rclosed=0.01
++  Ropen=1Meg
+L_L3         N13051 0  5000u  
+C_C3         0 N13051  0.001u  TC=0,0 
+L_L1         0 N13924  5000u  
+X_MOV1         0 N13924 MOVBASEKEL PARAMS:  I1=50 V1=1355 I2=1m V2=820 CN=10p
++  TOL=10 TC=5 RON=10m
+C_C1         0 0  0.001u  TC=0,0 
+R_Rl         N13051 N13505  2 TC=0,0 
+X_MOV2         N13051 N13924 MOVBASEKEL PARAMS:  I1=50 V1=1355 I2=1m V2=820
++  CN=10p TOL=10 TC=5 RON=10m
+X_MOV3         0 0 MOVBASEKEL PARAMS:  I1=50 V1=1355 I2=1m V2=820 CN=10p TOL=10
++  TC=5 RON=10m

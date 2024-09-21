@@ -1,0 +1,22 @@
+Circuit: * C:\Users\vigna\Documents\1.SAMEER\simulation stuff\LTSPICE\Draft2.asc
+
+x1:v3: Missing value, assumed 0V @ DC
+Direct Newton iteration for .op point succeeded.
+
+Date: Thu Aug 13 11:36:26 2020
+Total elapsed time: 0.046 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 2157
+traniter = 2154
+tranpoints = 1072
+accept = 1066
+rejected = 6
+matrix size = 17
+fillins = 5
+solver = Normal
+Matrix Compiler1: 914 bytes object code size  0.2/0.2/[0.1]
+Matrix Compiler2: off  [0.1]/0.3/0.2
+

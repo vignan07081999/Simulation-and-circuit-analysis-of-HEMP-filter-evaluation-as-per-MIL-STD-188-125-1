@@ -1,0 +1,21 @@
+Circuit: * C:\Users\vigna\Documents\1.SAMEER\simulation stuff\LTSPICE\sg_multiplesparks.asc
+
+Direct Newton iteration for .op point succeeded.
+
+Date: Wed Aug 12 10:18:51 2020
+Total elapsed time: 0.422 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 134876
+traniter = 134873
+tranpoints = 42561
+accept = 32925
+rejected = 9636
+matrix size = 14
+fillins = 0
+solver = Normal
+Matrix Compiler1: 366 bytes object code size  0.1/0.1/[0.1]
+Matrix Compiler2: 802 bytes object code size  0.1/0.2/[0.1]
+

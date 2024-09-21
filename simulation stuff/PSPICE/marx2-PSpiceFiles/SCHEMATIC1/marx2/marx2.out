@@ -1,0 +1,114 @@
+
+**** 08/21/20 11:07:45 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-marx2"  [ C:\Users\vigna\Documents\1.SAMEER\simulation stuff\PSPICE\marx2-pspicefiles\schematic1\marx2.sim ]
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "marx2.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\vigna\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 10us 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source MARX2
+C_C1         0 N00184  210.3p IC=-50kV TC=0,0 
+C_C2         0 N00176  50p  TC=0,0 
+R_R1         0 N00172  150 TC=0,0 
+L_L1         N00180 N00184  0.008n  
+X_U1         N00180 N00176 Sw_tClose PARAMS: tClose=0 ttran=1n Rclosed=0.01
++  Ropen=1Meg
+X_U2         N00176 N00172 Sw_tClose PARAMS: tClose=10.9n ttran=20n
++  Rclosed=0.000001 Ropen=1Meg
+R_R2         0 N00172  10k TC=0,0 
+
+**** RESUMING marx2.cir ****
+.END
+
+**** 08/21/20 11:07:45 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-marx2"  [ C:\Users\vigna\Documents\1.SAMEER\simulation stuff\PSPICE\marx2-pspicefiles\schematic1\marx2.sim ]
+
+
+ ****     Voltage Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.Smod       X_U2.Smod       
+         RON     .01            1.000000E-06 
+        ROFF    1.000000E+06    1.000000E+06 
+         VON    1               1            
+        VOFF    0               0            
+
+
+**** 08/21/20 11:07:45 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-marx2"  [ C:\Users\vigna\Documents\1.SAMEER\simulation stuff\PSPICE\marx2-pspicefiles\schematic1\marx2.sim ]
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N00172)    3.6943 (N00176) 25.00E+03 (N00180) 50.00E+03 (N00184) 50.00E+03     
+
+(X_U1.3)    0.0000 (X_U2.3)    0.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    X_U1.V1      0.000E+00
+    X_U2.V1      0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 08/21/20 11:07:45 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-marx2"  [ C:\Users\vigna\Documents\1.SAMEER\simulation stuff\PSPICE\marx2-pspicefiles\schematic1\marx2.sim ]
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .05
+

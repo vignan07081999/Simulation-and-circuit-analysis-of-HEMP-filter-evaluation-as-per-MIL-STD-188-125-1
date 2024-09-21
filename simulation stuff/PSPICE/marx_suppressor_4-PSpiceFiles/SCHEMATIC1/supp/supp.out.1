@@ -1,0 +1,57 @@
+
+**** 09/08/20 14:28:22 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-supp"  [ C:\Users\vigna\Documents\1.SAMEER\simulation stuff\PSPICE\marx_suppressor_4-PSpiceFiles\SCHEMATIC1\
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "supp.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\vigna\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 5ms 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source MARX_SUPPRESSOR_4
+X_U1         N32713 N32367 Sw_tClose PARAMS: tClose=0 ttran=0.2u Rclosed=0.01
++  Ropen=1Meg
+X_U2         N32367 N32377 Sw_tClose PARAMS: tClose=10.9n ttran=0.075u
++  Rclosed=0.000001 Ropen=1Meg
+R_R         N32377 N33224  60 TC=0,0 
+L_L         N32713 N32719  0.001n  
+C_C         0 N32367  0.012u  TC=0,0 
+R_Rs         0 N32377  500k TC=0,0 
+C_Ceq         0 N32719  210.3p IC=-1.23kV TC=0,0 
+X_VR1         0 N33224 MOVBASEKEL PARAMS:  I1=1 V1=48 I2=0.1m V2=22 CN=10p
++  TOL=10 TC=5 RON=10m
+C_C1         0 N33351  0.01n  TC=0,0 
+L_L1         N33224 N33351  40uH  
+R_R1         0 N33351  2 TC=0,0 
+L_L2         0 0  40uH  
+C_C2         0 0  0.01n  TC=0,0 
+X_VR2         0 0 MOVBASEKEL PARAMS:  I1=1 V1=48 I2=0.1m V2=22 CN=10p TOL=10
++  TC=5 RON=10m
+
+**** RESUMING supp.cir ****
+.END
+
+ERROR(ORPSIM-15143): Voltage source and/or inductor loop involving L_L2. You may break the loop by adding a series resistance
+

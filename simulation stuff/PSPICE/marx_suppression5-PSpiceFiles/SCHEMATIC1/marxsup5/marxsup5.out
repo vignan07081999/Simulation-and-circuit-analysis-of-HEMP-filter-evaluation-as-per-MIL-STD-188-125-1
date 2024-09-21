@@ -1,0 +1,142 @@
+
+**** 10/19/20 10:34:16 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-marxsup5"  [ c:\users\vigna\documents\1.sameer\simulation stuff\pspice\marx_suppression5-pspicefiles\schemat
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "marxsup5.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\vigna\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 5m 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source MARX_SUPPRESSION5
+X_14N511K         N38887 N38975 MOVBASEKEL PARAMS:  I1=1m V1=510 I2=5 V2=842
++  CN=10p TOL=10 TC=5 RON=10m
+L_L         N38819 N38825  0.001n  
+R_R4         0 N38993  0.01 TC=0,0 
+R_R1         N38941 N38909  2 TC=0,0 
+C_C         0 N38635  0.012u  TC=0,0 
+C_Ceq         0 N38825  210.3p IC=-1.23kV TC=0,0 
+R_R         N38645 N38975  60 TC=0,0 
+R_R3         0 N38887  0.01 TC=0,0 
+R_R2         0 N39013  0.01 TC=0,0 
+R_Rs         0 N38645  500k TC=0,0 
+X_U1         N38819 N38635 Sw_tClose PARAMS: tClose=0 ttran=0.2u Rclosed=0.01
++  Ropen=1Meg
+X_U2         N38635 N38645 Sw_tClose PARAMS: tClose=10.9n ttran=0.075u
++  Rclosed=0.000001 Ropen=1Meg
+X_14N511K_2         N38993 N39013 MOVBASEKEL PARAMS:  I1=1m V1=510 I2=5 V2=842
++  CN=10p TOL=10 TC=5 RON=10m
+C_3xMPEAR0_3xMPEAR0_47K100         N38887 N38909  1.41u  TC=0,0 
+C_1x2E105J         N38993 N38941  1u  TC=0,0 
+L_WE6R1         N38975 N38909  6.1u  
+L_WE6R1_2         N39013 N38941  6.1u  
+
+**** RESUMING marxsup5.cir ****
+.END
+
+**** 10/19/20 10:34:16 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-marxsup5"  [ c:\users\vigna\documents\1.sameer\simulation stuff\pspice\marx_suppression5-pspicefiles\schemat
+
+
+ ****     Voltage Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.Smod       X_U2.Smod       
+         RON     .01            1.000000E-06 
+        ROFF    1.000000E+06    1.000000E+06 
+         VON    1               1            
+        VOFF    0               0            
+
+
+**** 10/19/20 10:34:16 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-marxsup5"  [ c:\users\vigna\documents\1.sameer\simulation stuff\pspice\marx_suppression5-pspicefiles\schemat
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N38635)  615.0200 (N38645)     .0381 (N38819) 1230.0000 (N38825) 1230.0000     
+
+(N38887) 12.37E-15 (N38909)     .0012 (N38941) 6.149E-06 (N38975)     .0012     
+
+(N38993) 61.55E-18 (N39013) 6.149E-06 (X_U1.3)    0.0000 (X_U2.3)    0.0000     
+
+(X_14N511K.21) 12.37E-15              (X_14N511K.22)     .0012                  
+
+(X_14N511K.23) 18.56E-15              (X_14N511K.24)    0.0000                  
+
+(X_14N511K.25)    0.0000              (X_14N511K.54) 144.7E-12                  
+
+(X_14N511K_2.21) 61.55E-18            (X_14N511K_2.22) 6.149E-06                
+
+(X_14N511K_2.23) 92.33E-18            (X_14N511K_2.24)    0.0000                
+
+(X_14N511K_2.25)    0.0000            (X_14N511K_2.54) 17.69E-15            
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    X_14N511K.VSENSE  -1.237E-12
+    X_U1.V1      0.000E+00
+    X_U2.V1      0.000E+00
+    X_14N511K_2.VSENSE  -6.155E-15
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 10/19/20 10:34:16 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-marxsup5"  [ c:\users\vigna\documents\1.sameer\simulation stuff\pspice\marx_suppression5-pspicefiles\schemat
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .08
+

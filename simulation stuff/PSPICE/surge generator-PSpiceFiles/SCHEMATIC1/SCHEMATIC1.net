@@ -1,0 +1,8 @@
+* source SURGE GENERATOR
+R_R5         0 N03143  300 TC=0,0 
+C_C1         0 N02710  0.005u  TC=0,0 
+X_U1         N02710 N02714 Sw_tClose PARAMS: tClose=1n ttran=1u Rclosed=0.01
++  Ropen=1Meg
+R_R4         N02680 N02710  5k TC=0,0 
+L_L1         N02714 N03143  0.0001u  
+V_V3         N02680 0 1.07kVdc

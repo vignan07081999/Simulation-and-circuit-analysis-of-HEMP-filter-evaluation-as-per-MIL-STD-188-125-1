@@ -1,0 +1,58 @@
+* source MARX_MULTIPLE
+R_R1         N01125 N01233  500K TC=0,0 
+R_R2         N01233 N01307  500K TC=0,0 
+R_R3         N01307 N01410  500K TC=0,0 
+R_R4         N01410 N01499  500K TC=0,0 
+R_R5         N01499 N01560  500K TC=0,0 
+R_R6         N01560 N01660  500K TC=0,0 
+R_R8         N00967 N01190  500K TC=0,0 
+R_R9         N01190 N01264  500K TC=0,0 
+R_R10         N01264 N01367  500K TC=0,0 
+R_R11         N01367 N01444  500K TC=0,0 
+R_R12         N01444 N01535  500K TC=0,0 
+R_R13         N01535 N01584  500K TC=0,0 
+R_R15         0 N00967  500K TC=0,0 
+R_R16         N00967 N01255  500K TC=0,0 
+R_R17         N01255 N01358  500K TC=0,0 
+R_R18         N01358 N01440  500K TC=0,0 
+R_R19         N01440 N01539  500K TC=0,0 
+R_R20         N01539 N01575  500K TC=0,0 
+R_R21         N01575 N01668  500K TC=0,0 
+C_C2         N01125 N00967  3.1n  TC=0,0 
+C_C3         N00967 N01190  3.1n  TC=0,0 
+C_C4         N01233 N01255  3.1n  TC=0,0 
+C_C5         N01255 N01264  3.1n  TC=0,0 
+C_C6         N01307 N01358  3.1n  TC=0,0 
+C_C7         N01358 N01367  3.1n  TC=0,0 
+C_C8         N01410 N01440  3.1n  TC=0,0 
+C_C9         N01440 N01444  3.1n  TC=0,0 
+C_C10         N01495 N01539  3.1n  TC=0,0 
+C_C11         N01539 N01535  3.1n  TC=0,0 
+C_C12         N01560 N01575  3.1n  TC=0,0 
+C_C13         N01575 N01584  3.1n  TC=0,0 
+X_U1         N00967 N01125 Sw_tClose PARAMS: tClose=0 ttran=0.2u Rclosed=0.01
++  Ropen=1Meg
+R_R22         N01685 N00967  1M TC=0,0 
+R_R23         N01689 N01125  1M TC=0,0 
+R_R24         0 N01685  1M TC=0,0 
+R_R25         0 N01689  1M TC=0,0 
+X_U2         N01190 N01233 Sw_tClose PARAMS: tClose=0 ttran=0.2u Rclosed=0.01
++  Ropen=1Meg
+X_U3         N01264 N01307 Sw_tClose PARAMS: tClose=0 ttran=0.2u Rclosed=0.01
++  Ropen=1Meg
+X_U4         N01367 N01410 Sw_tClose PARAMS: tClose=0 ttran=0.2u Rclosed=0.01
++  Ropen=1Meg
+X_U5         N01444 N01495 Sw_tClose PARAMS: tClose=0 ttran=0.2u Rclosed=0.01
++  Ropen=1Meg
+X_U6         N01535 N01560 Sw_tClose PARAMS: tClose=0 ttran=0.2u Rclosed=0.01
++  Ropen=1Meg
+X_U7         N01584 N01660 Sw_tClose PARAMS: tClose=0 ttran=0.2u Rclosed=0.01
++  Ropen=1Meg
+C_C14         N01668 N01660  3.1n  TC=0,0 
+L_Lm         N01768 N01668  0.001p  
+C_Cp         0 N01768  0.5n  TC=0,0 
+X_U8         N05133 N01768 Sw_tClose PARAMS: tClose=50n ttran=0.075u
++  Rclosed=0.01 Ropen=1Meg
+R_RL         0 N018510  1k TC=0,0 
+V_V1         N00967 0 300k
+R_R28         N018510 N05133  0.01 TC=0,0 

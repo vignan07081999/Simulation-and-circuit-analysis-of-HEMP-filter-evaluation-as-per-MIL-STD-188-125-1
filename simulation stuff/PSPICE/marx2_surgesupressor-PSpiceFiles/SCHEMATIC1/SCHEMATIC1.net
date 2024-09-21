@@ -1,0 +1,15 @@
+* source MARX2_SURGESUPRESSOR
+L_L4         N20928 N20794  500u  
+R_R5         0 N20928  2 TC=0,0 
+C_C1         0 N21070  210.3p IC=-300kV TC=0,0 
+X_U1         N21064 N20478 Sw_tClose PARAMS: tClose=0 ttran=0.2u Rclosed=0.01
++  Ropen=1Meg
+R_R3         N20488 N20794  60 TC=0,0 
+C_C7         0 N20928  0.001u  TC=0,0 
+R_R4         0 N20488  500k TC=0,0 
+C_C2         0 N20478  0.012u  TC=0,0 
+X_U2         N20478 N20488 Sw_tClose PARAMS: tClose=10.9n ttran=0.075u
++  Rclosed=0.000001 Ropen=1Meg
+L_L1         N21064 N21070  0.001n  
+X_VR3         0 N20794 MOVBASEKEL PARAMS:  I1=50 V1=1355 I2=1m V2=820 CN=10p
++  TOL=10 TC=5 RON=10m

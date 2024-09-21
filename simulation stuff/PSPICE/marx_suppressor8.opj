@@ -1,0 +1,43 @@
+(ExpressProject "marx_suppressor8"
+  (ProjectVersion "19981106")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (NoModify)
+    (File ".\marx_suppressor8.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+  (Folder "Outputs"
+    (File ".\marx_suppressor8-pspicefiles\schematic1\schematic1.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (ActiveProfile ".\marx_suppressor8-pspicefiles\schematic1\mas.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\marx_suppressor8-pspicefiles\schematic1\mas.sim"
+        (DisplayName "SCHEMATIC1-mas")
+        (Type "PSpice Profile")))
+    (Folder "Model Libraries"
+      (Sort User))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (PartMRUSelector)
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Outputs")
+      (Select "Design Resources"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 0 200 0 273"))
+      (Tab 0)))
+  (MPSSessionName "vigna")
+  (LastUsedLibraryBrowseDirectory
+     "C:\OrCAD\OrCAD_16.6_Lite\tools\capture\library"))

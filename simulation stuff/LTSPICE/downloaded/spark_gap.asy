@@ -1,0 +1,12 @@
+Version 4
+SymbolType BLOCK
+LINE Normal 16 -48 16 -21
+LINE Normal 16 52 16 25
+CIRCLE Normal 26 -1 6 -21
+CIRCLE Normal 6 5 26 25
+PIN 16 -48 NONE 8
+PINATTR PinName SPARK[T]
+PINATTR SpiceOrder 1
+PIN 16 48 NONE 8
+PINATTR PinName SPARK[B]
+PINATTR SpiceOrder 2

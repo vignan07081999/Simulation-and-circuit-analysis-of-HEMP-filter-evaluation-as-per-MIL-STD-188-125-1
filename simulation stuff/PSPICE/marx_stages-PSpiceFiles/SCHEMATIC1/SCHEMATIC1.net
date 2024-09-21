@@ -1,0 +1,27 @@
+* source MARX_STAGES
+R_R1         N18601 N16112  120 TC=0,0 
+X_U2         N16190 N16112 Sw_tClose PARAMS: tClose=10.9n ttran=20n
++  Rclosed=0.000001 Ropen=1Meg
+C_C2         0 N16190  0.005u  TC=0,0 
+C_C3         N16507 N16498  442.6p  TC=0,0 
+C_C4         N16628 N16614  442.6p  TC=0,0 
+C_C5         N16697 N16516  442.6p  TC=0,0 
+C_C6         0 N16610  442.6p  TC=0,0 
+R_R3         N16610 N16516  100k TC=0,0 
+R_R4         N16516 N16614  100k TC=0,0 
+R_R5         N16614 N16498  100k TC=0,0 
+R_R6         N16628 N16507  100k TC=0,0 
+R_R7         N16697 N16628  100k TC=0,0 
+R_R8         0 N16697  100k TC=0,0 
+R_R9         N17047 N16610  10 TC=0,0 
+X_U3         N167470 N16190 Sw_tClose PARAMS: tClose=0 ttran=1n Rclosed=0.01
++  Ropen=1Meg
+X_U4         N16614 N16507 Sw_tClose PARAMS: tClose=0 ttran=1u Rclosed=0.01
++  Ropen=1Meg
+X_U5         N16516 N16628 Sw_tClose PARAMS: tClose=0 ttran=1u Rclosed=0.01
++  Ropen=1Meg
+X_U6         N16610 N16697 Sw_tClose PARAMS: tClose=0 ttran=1u Rclosed=0.01
++  Ropen=1Meg
+V_V1         N17047 0 300k
+L_L1         N16498 N167470  1pH  
+R_R10         0 N18601  0.01 TC=0,0 

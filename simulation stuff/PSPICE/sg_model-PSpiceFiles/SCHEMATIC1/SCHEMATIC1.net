@@ -1,0 +1,15 @@
+* source SG_MODEL    
+V2 N002 0 1
+V3 N003 2
+Rcont1 N001 control 1
+C1 control 0 10p
+Bcharge1 BC 0 V=if(V(1)>=Vbreakdown,1,0)
+A1 N002 0 BC 0 0 0 N001 0 DFLOP
+SW1 N003 1 control 0 Sgap
+.IC V(1)=0 V(control)=0
+.model Sgap SW(Ron=1u Roff=100Meg Vt=0.5 Vh=0)
+.param Vbreakdown=299.8k
+.tran 0 5000ns 0
+.backanno
+.end
+

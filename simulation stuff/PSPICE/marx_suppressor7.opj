@@ -1,0 +1,74 @@
+(ExpressProject "marx_suppressor7"
+  (ProjectVersion "19981106")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (NoModify)
+    (File ".\marx_suppressor7.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+  (Folder "Outputs"
+    (File ".\marx_suppressor7-pspicefiles\schematic1\schematic1.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (ActiveProfile ".\marx_suppressor7-pspicefiles\schematic1\marx7.sim")
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\marx_suppressor7-pspicefiles\schematic1\marx7.sim"
+        (DisplayName "SCHEMATIC1-marx7")
+        (Type "PSpice Profile")))
+    (Folder "Model Libraries"
+      (Sort User))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (PartMRUSelector
+    (C
+      (FullPartName "C.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (L
+      (FullPartName "L.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (TVS
+      (FullPartName "TVS.Normal")
+      (LibraryName
+         "C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\TCLSCRIPTS\CAPPSPICEMODELAPP\TVS\HYBRID\SUPPORTFILES\TVS.OLB")
+      (DeviceIndex "0")))
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources"
+         "C:\Users\vigna\Documents\1.SAMEER\simulation stuff\PSPICE\marx_suppressor7.dsn")
+      (Path "Design Resources"
+         "C:\Users\vigna\Documents\1.SAMEER\simulation stuff\PSPICE\marx_suppressor7.dsn"
+         "SCHEMATIC1")
+      (Path "Outputs")
+      (Select "Design Resources"
+         "C:\Users\vigna\Documents\1.SAMEER\simulation stuff\PSPICE\marx_suppressor7.dsn"
+         "SCHEMATIC1" "PAGE1"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 0 200 0 293"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -31 52 979 52 232")
+        (Scroll "-229 40")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path
+         "C:\USERS\VIGNA\DOCUMENTS\1.SAMEER\SIMULATION STUFF\PSPICE\MARX_SUPPRESSOR7.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PAGE1")))
+  (MPSSessionName "vigna"))

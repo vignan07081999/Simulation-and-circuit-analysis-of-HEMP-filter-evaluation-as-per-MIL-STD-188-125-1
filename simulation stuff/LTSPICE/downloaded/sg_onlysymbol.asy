@@ -1,0 +1,13 @@
+Version 4
+SymbolType BLOCK
+LINE Normal -81 0 -35 0
+LINE Normal 80 0 35 0
+CIRCLE Normal -12 -11 -35 10
+CIRCLE Normal 35 -11 12 10
+TEXT -10 -32 Left 2 SG
+PIN -80 0 NONE 8
+PINATTR PinName 1
+PINATTR SpiceOrder 1
+PIN 80 0 NONE 8
+PINATTR PinName 2
+PINATTR SpiceOrder 2

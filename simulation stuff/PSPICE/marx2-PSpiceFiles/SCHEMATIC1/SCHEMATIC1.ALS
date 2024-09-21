@@ -1,0 +1,9 @@
+.ALIASES
+C_C1            C1(1=0 2=N00184 ) CN @MARX2.SCHEMATIC1(sch_1):INS26@ANALOG.C.Normal(chips)
+C_C2            C2(1=0 2=N00176 ) CN @MARX2.SCHEMATIC1(sch_1):INS42@ANALOG.C.Normal(chips)
+R_R1            R1(1=0 2=N00172 ) CN @MARX2.SCHEMATIC1(sch_1):INS67@ANALOG.R.Normal(chips)
+L_L1            L1(1=N00180 2=N00184 ) CN @MARX2.SCHEMATIC1(sch_1):INS92@ANALOG.L.Normal(chips)
+X_U1            U1(1=N00180 2=N00176 ) CN @MARX2.SCHEMATIC1(sch_1):INS131@SWITCH.Sw_tClose.Normal(chips)
+X_U2            U2(1=N00176 2=N00172 ) CN @MARX2.SCHEMATIC1(sch_1):INS156@SWITCH.Sw_tClose.Normal(chips)
+R_R2            R2(1=0 2=N00172 ) CN @MARX2.SCHEMATIC1(sch_1):INS4383@ANALOG.R.Normal(chips)
+.ENDALIASES

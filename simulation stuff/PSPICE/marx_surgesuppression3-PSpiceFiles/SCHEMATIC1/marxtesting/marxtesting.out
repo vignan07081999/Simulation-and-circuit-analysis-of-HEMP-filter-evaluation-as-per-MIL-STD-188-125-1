@@ -1,0 +1,165 @@
+
+**** 09/08/20 12:51:01 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-marxtesting"  [ c:\users\vigna\documents\1.sameer\simulation stuff\pspice\marx_surgesuppression3-pspicefiles
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "marxtesting.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\vigna\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 5m 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source MARX_SURGESUPPRESSION3
+X_U1         N24766 N24176 Sw_tClose PARAMS: tClose=0 ttran=0.2u Rclosed=0.01
++  Ropen=1Meg
+X_U2         N24176 N24186 Sw_tClose PARAMS: tClose=10.9n ttran=0.075u
++  Rclosed=0.000001 Ropen=1Meg
+C_Ceq         0 N24772  210.3p IC=-300kV TC=0,0 
+R_Rl         N24470 N25086  2 TC=0,0 
+R_Rs         0 N24186  500k TC=0,0 
+L_L         N24766 N24772  0.001n  
+L_L3         N27481 N24608  500u  
+X_820543011_1         N24378 N24584 MOVBASEKEL PARAMS:  I1=50 V1=775 I2=1m
++  V2=420 CN=10p TOL=10 TC=5 RON=10m
+R_R         N24186 N24584  60 TC=0,0 
+C_C         0 N24176  0.012u  TC=0,0 
+L_L1         N25525 N24584  500u  
+X_820554001         N24378 N25525 MOVBASEKEL PARAMS:  I1=5 V1=355 I2=0.1m
++  V2=200 CN=10p TOL=10 TC=5 RON=10m
+C_C4         N24378 N25086  0.001u  TC=0,0 
+L_L4         N25086 N25525  500u  
+R_R1         0 N24378  0.001 TC=0,0 
+R_R2         N24512 0  0.001 TC=0,0 
+R_R3         N24608 0  0.001 TC=0,0 
+R_R4         N24470 N27387  0.001 TC=0,0 
+L_L7         N27387 N27481  500u  
+C_C7         N24512 N27387  0.001u  TC=0,0 
+X_820543011_2         N24512 N24608 MOVBASEKEL PARAMS:  I1=50 V1=775 I2=1m
++  V2=420 CN=10p TOL=10 TC=5 RON=10m
+X_820554002         N24512 N27481 MOVBASEKEL PARAMS:  I1=5 V1=355 I2=0.1m
++  V2=200 CN=10p TOL=10 TC=5 RON=10m
+
+**** RESUMING marxtesting.cir ****
+.END
+
+**** 09/08/20 12:51:01 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-marxtesting"  [ c:\users\vigna\documents\1.sameer\simulation stuff\pspice\marx_surgesuppression3-pspicefiles
+
+
+ ****     Voltage Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.Smod       X_U2.Smod       
+         RON     .01            1.000000E-06 
+        ROFF    1.000000E+06    1.000000E+06 
+         VON    1               1            
+        VOFF    0               0            
+
+
+**** 09/08/20 12:51:01 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-marxtesting"  [ c:\users\vigna\documents\1.sameer\simulation stuff\pspice\marx_surgesuppression3-pspicefiles
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N24176) 150.0E+03 (N24186)    9.2989 (N24378) 601.1E-15 (N24470) 300.0E-06     
+
+(N24512) 300.3E-18 (N24584)     .3003 (N24608) 150.0E-06 (N24766) 300.0E+03     
+
+(N24772) 300.0E+03 (N25086)     .3003 (N25525)     .3003 (N27387) 150.0E-06     
+
+(N27481) 150.0E-06 (X_U1.3)    0.0000 (X_U2.3)    0.0000                        
+
+(X_820554001.21) 601.1E-15            (X_820554001.22)     .3003                
+
+(X_820554001.23) 2.104E-12            (X_820554001.24)    0.0000                
+
+(X_820554001.25)    0.0000            (X_820554001.54) 1.887E-06                
+
+(X_820554002.21) 300.3E-18            (X_820554002.22) 150.0E-06                
+
+(X_820554002.23) 1.051E-15            (X_820554002.24)    0.0000                
+
+(X_820554002.25)    0.0000            (X_820554002.54) 1.123E-12                
+
+(X_820543011_1.21) 601.1E-15          (X_820543011_1.22)     .3003              
+
+(X_820543011_1.23) 2.104E-12          (X_820543011_1.24)    0.0000              
+
+(X_820543011_1.25)    0.0000          (X_820543011_1.54) 1.393E-06              
+
+(X_820543011_2.21) 300.2E-18          (X_820543011_2.22) 150.0E-06              
+
+(X_820543011_2.23) 1.051E-15          (X_820543011_2.24)    0.0000              
+
+(X_820543011_2.25)    0.0000          (X_820543011_2.54) 2.056E-12          
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    X_U1.V1      0.000E+00
+    X_U2.V1      0.000E+00
+    X_820543011_1.VSENSE  -3.006E-10
+    X_820554001.VSENSE  -3.006E-10
+    X_820543011_2.VSENSE  -1.501E-13
+    X_820554002.VSENSE  -1.501E-13
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 09/08/20 12:51:01 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-marxtesting"  [ c:\users\vigna\documents\1.sameer\simulation stuff\pspice\marx_surgesuppression3-pspicefiles
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .25
+

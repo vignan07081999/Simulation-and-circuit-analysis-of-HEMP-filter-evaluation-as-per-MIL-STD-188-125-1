@@ -1,0 +1,142 @@
+
+**** 09/25/20 11:05:04 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-supp"  [ C:\Users\vigna\Documents\1.SAMEER\simulation stuff\PSPICE\marx_suppressor_4-pspicefiles\schematic1\
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "supp.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\vigna\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 5ms 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source MARX_SUPPRESSOR_4
+X_U1         N32713 N32367 Sw_tClose PARAMS: tClose=0 ttran=0.2u Rclosed=0.01
++  Ropen=1Meg
+X_U2         N32367 N32377 Sw_tClose PARAMS: tClose=10.9n ttran=0.075u
++  Rclosed=0.000001 Ropen=1Meg
+R_R         N32377 N37370  60 TC=0,0 
+L_L         N32713 N32719  0.001n  
+C_C         0 N32367  0.012u  TC=0,0 
+R_Rs         0 N32377  500k TC=0,0 
+C_Ceq         0 N32719  210.3p IC=-1.23kV TC=0,0 
+C_890324027012CS         N33248 N33351  1.2u  TC=0,0 
+L_74457010         0 N33351  6.1u  
+R_R1         N33423 N33351  2 TC=0,0 
+R_R2         N37370 N35196  0.01 TC=0,0 
+R_R3         0 N33248  0.01 TC=0,0 
+R_R4         0 N35146  0.01 TC=0,0 
+C_890324027012CS_2         N35146 N33423  1.33u  TC=0,0 
+L_74457010_2         N35196 N33423  1u  
+X_VR2         N35146 N35196 MOVBASEKEL PARAMS:  I1=0.1m V1=68 I2=1 V2=135
++  CN=10p TOL=10 TC=5 RON=10m
+X_VR3         N33248 0 MOVBASEKEL PARAMS:  I1=0.1m V1=68 I2=1 V2=150 CN=10p
++  TOL=10 TC=5 RON=10m
+
+**** RESUMING supp.cir ****
+.END
+
+**** 09/25/20 11:05:04 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-supp"  [ C:\Users\vigna\Documents\1.SAMEER\simulation stuff\PSPICE\marx_suppressor_4-pspicefiles\schematic1\
+
+
+ ****     Voltage Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.Smod       X_U2.Smod       
+         RON     .01            1.000000E-06 
+        ROFF    1.000000E+06    1.000000E+06 
+         VON    1               1            
+        VOFF    0               0            
+
+
+**** 09/25/20 11:05:04 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-supp"  [ C:\Users\vigna\Documents\1.SAMEER\simulation stuff\PSPICE\marx_suppressor_4-pspicefiles\schematic1\
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N32367)  615.0200 (N32377)     .0381 (N32713) 1230.0000 (N32719) 1230.0000     
+
+(N33248)    0.0000 (N33351)    0.0000 (N33423)     .0012 (N35146) 12.31E-15     
+
+(N35196)     .0012 (N37370)     .0012 (X_U1.3)    0.0000 (X_U2.3)    0.0000     
+
+(X_VR2.21) 12.31E-15                  (X_VR2.22)     .0012                      
+
+(X_VR2.23) 18.47E-15                  (X_VR2.24)    0.0000                      
+
+(X_VR2.25)    0.0000                  (X_VR2.54) 169.9E-09                      
+
+(X_VR3.21)    0.0000                  (X_VR3.22)    0.0000                      
+
+(X_VR3.23)    0.0000                  (X_VR3.24)    0.0000                      
+
+(X_VR3.25)    0.0000                  (X_VR3.54)    0.0000                  
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    X_U1.V1      0.000E+00
+    X_U2.V1      0.000E+00
+    X_VR2.VSENSE  -1.231E-12
+    X_VR3.VSENSE   0.000E+00
+
+    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 09/25/20 11:05:04 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-supp"  [ C:\Users\vigna\Documents\1.SAMEER\simulation stuff\PSPICE\marx_suppressor_4-pspicefiles\schematic1\
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .09
+

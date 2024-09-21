@@ -1,0 +1,112 @@
+
+**** 08/19/20 09:39:35 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-surgegenerator"  [ C:\Users\vigna\Documents\1.SAMEER\simulation stuff\PSPICE\surge generator-pspicefiles\sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "surgegenerator.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\vigna\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 10us 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source SURGE GENERATOR
+R_R5         0 N03143  300 TC=0,0 
+C_C1         0 N02710  0.005u  TC=0,0 
+X_U1         N02710 N02714 Sw_tClose PARAMS: tClose=1n ttran=1u Rclosed=0.01
++  Ropen=1Meg
+R_R4         N02680 N02710  5k TC=0,0 
+L_L1         N02714 N03143  0.0001u  
+V_V3         N02680 0 1.07kVdc
+
+**** RESUMING surgegenerator.cir ****
+.END
+
+**** 08/19/20 09:39:35 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-surgegenerator"  [ C:\Users\vigna\Documents\1.SAMEER\simulation stuff\PSPICE\surge generator-pspicefiles\sch
+
+
+ ****     Voltage Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.Smod       
+         RON     .01         
+        ROFF    1.000000E+06 
+         VON    1            
+        VOFF    0            
+
+
+**** 08/19/20 09:39:35 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-surgegenerator"  [ C:\Users\vigna\Documents\1.SAMEER\simulation stuff\PSPICE\surge generator-pspicefiles\sch
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N02680) 1070.0000 (N02710) 1064.7000 (N02714)     .3193 (N03143)     .3193     
+
+(X_U1.3)    0.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V3        -1.064E-03
+    X_U1.V1      0.000E+00
+
+    TOTAL POWER DISSIPATION   1.14E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 08/19/20 09:39:35 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-surgegenerator"  [ C:\Users\vigna\Documents\1.SAMEER\simulation stuff\PSPICE\surge generator-pspicefiles\sch
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .02
+
