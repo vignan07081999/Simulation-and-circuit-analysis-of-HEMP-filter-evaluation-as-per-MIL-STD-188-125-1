@@ -29,10 +29,6 @@ HEMP filters play a crucial role in safeguarding:
 3. **MATLAB Verification:**  Implement MATLAB code to analyze the filter's performance and ensure it meets the MIL-STD-188-125-1 requirements.
 4. **Prototype and Testing:** Construct a physical HEMP filter prototype and conduct comprehensive testing to validate its effectiveness under real-world conditions.
 
-## Current Status
-
-* **In Progress:**  The project is currently underway, with initial focus on the simulation and design phases.
-
 ## Future Work
 
 * **Prototype Development:**  Build and test a physical HEMP filter prototype.
